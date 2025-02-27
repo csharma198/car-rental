@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-xl;
+  }
+  
+  .neo-input {
+    @apply bg-white border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-lg shadow-sm;
+  }
+
+  .neo-button {
+    @apply bg-gradient-to-r from-indigo-600 to-blue-500 hover:from-indigo-500 hover:to-blue-400 text-white shadow-lg 
+    hover:shadow-indigo-500/30 transition-all duration-200 transform hover:-translate-y-0.5;
+  }
+
+  .upload-zone {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-dashed border-gray-300 
+    hover:border-indigo-400 hover:from-gray-50 hover:to-indigo-50 transition-all duration-200;
+  }
+}
+
+/* Custom form styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  @apply bg-white border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 rounded-lg shadow-sm;
+}
+
+/* Hover effect for inputs */
+input:hover,
+select:hover,
+textarea:hover {
+  @apply border-gray-300;
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  @apply border-indigo-500 ring-2 ring-indigo-500/20 outline-none;
+}
+
+/* Placeholder styles */
+::placeholder {
+  @apply text-gray-400;
+}
